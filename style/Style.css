@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 50%;
+    }
+  }
+@media screen and (max-width: 920px) {
+    html {
+        font-size: 40%;
+    }
+  }
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 28%;
+    }
+  }
+body {
+    background-color: rgb(49, 49, 51);
+    font-size: 1.8rem;
+}
+nav {
+    font-size: 10vw;
+    position: fixed;
+    background-color: rgb(31, 31, 32);
+    width: 100%;
+    height: 10.5rem;
+    z-index: 2;
+    top: 0%;
+}
+h1 {
+    font-size: 6rem;
+    font-family: 'Bebas Neue', cursive;
+}
+h2 {
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+}
+h3 {
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+}
+p {
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+section {
+    padding: 12rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+footer {
+    padding: 4rem;
+    background-color: rgb(160, 152, 142);
+    height: 100vh;
+    display: flex;
+    padding-top: 15%;
+    justify-content: center;
+}
+/*---Start of HEADER---*/
+.navlist {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10vw;
+}
+@media screen and (max-width: 920px) {
+    .navlist {
+        margin: 0 1rem;
+        justify-content: center;
+    }
+}
+.navlist a {
+    border-radius: 2rem;
+    font-size: 10vw;
+    font-size: 2.7rem;
+    padding: 3rem;
+    color: white;
+    display: block;
+    transition: .3s;
+}
+.navlist a:hover {
+    background-color: rgb(132, 148, 179);
+}
+/*---End of HEADER---*/
+
+#about-section {
+    background-color: rgb(160, 152, 142);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#contact-form {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 2rem;
+    background-color: rgb(39, 39, 41);
+    width: 30%;
+    height: auto;
+    text-align: center;    
+    margin: 5rem auto 10rem auto;
+    padding: 7rem 2rem 2rem 0rem;
+    border-radius: 5rem;
+    border: 0.2rem solid transparent;
+    outline: none;
+    color: white;
+}
+.textarea {
+    background-color: rgb(91, 91, 94);
+    border-radius: 1rem;
+    border: 0.2rem solid transparent;
+    outline: none;
+    line-height: 1.2;
+    resize: none;
+    transition: all 0.25s;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-right: 3rem;
+}
+.textarea:hover, .input:hover {
+    background-color: rgb(138, 132, 124);
+    cursor: text;
+}
+.label {
+    font-weight: bold;
+    max-width: 100%;
+    padding-left: 1rem;
+}
+.input {
+    background-color: rgb(91, 91, 94);
+    margin-right: 3rem;
+    border-radius: 1rem;
+    border: 0.2rem solid transparent;
+    outline: none;
+    line-height: 1.2;
+    text-align: center;
+    transition: all 0.25s;
+    height: 4rem;
+    max-width: 100%;
+}
+@media screen and (max-width: 920px) {
+    #contact-form {
+        grid-template-columns: 1fr;
+    }
+    .textarea {
+        margin: 0 auto;
+        max-width: 70%;
+    }
+    .input {
+        margin: 0 auto;
+        max-width: 70%;
+    }
+}
+
+/*---Start of PROJECT section*/
+.represantive-img {
+    display: block;
+    margin: 10rem auto 15rem auto;
+    max-width: 55rem;
+}
+.project-description {
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    margin: 10rem;
+    padding-top: 5rem;
+    border-top: 0.2rem solid rgb(138, 132, 124);;
+}
+.project-grid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "item1 item2 item3"
+    "item4 item5 item6";
+    grid-gap: 10rem;
+}
+@media screen and (max-width: 920px) {
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "item1 item2"
+        "item3 item4"
+        "item5 item6";
+    }
+}
+@media screen and (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6";
+    }
+}
+.projects {
+    z-index: 0;
+    text-align: center;
+    max-width: 80%;
+    transition: transform .2s;
+}
+.hover:hover {
+    transform: scale(1.1);
+}
+.project-headline {
+    display: block;
+    color: white;
+    padding: 3rem;
+    background-color: rgb(78, 75, 70);
+}
+
+/*---End of PROJECT section*/
+
+/*---Start of FOOTER---*/
+.contact-button {
+    background-color: rgb(151, 144, 135);
+    font-weight: 700;
+    font-size: 2.3rem;
+    border: solid 0.2rem;
+    border-radius: 1.2rem;
+    margin: 4rem;
+    height: 6rem;
+}
+.contact-button:hover {
+    background-color: rgb(132, 148, 179);
+}
+.icons {
+    transition: transform .2s;
+}
+#contact-footer {
+    height: fit-content;
+    padding-top: 4rem;
+}
+/*---End of FOOTER---*/
+
+
+
+
+/* Asigning name to grid area*/
+#item1 {
+    grid-area: item1;
+}
+#item2 {
+    grid-area: item2;
+}
+#item3 {
+    grid-area: item3;
+}
+#item4 {
+    grid-area: item4;
+}
+#item5 {
+    grid-area: item5;
+}
+#item6 {
+    grid-area: item6;
+}
+
+
